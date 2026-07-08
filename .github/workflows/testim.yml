@@ -1,0 +1,36 @@
+name: Testim E2E
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 2 * * *'
+
+jobs:
+  run-testimio-cli:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - run: npm install -g @testim/testim-cli
+
+      - run: |
+          testim \
+          --token "${{ secrets.TESTIM_TOKEN }}" \
+          --project "AIdW2sguUcwTwZGI1DPc" \
+          --grid "Testim-Grid" \
+          --mode "extension" \
+          --branch "8 July 2026 Yuvraj GA" \
+          --suite "Stag_ShipcoOnline-01-Prelogin All Modules" \
+          --override-execution-name "ShipcoStag_8July26_CICDgitHubActions" \
+          --test-config "Chrome - Windows 11 - 1920*1080" \
+          --parallel 1
