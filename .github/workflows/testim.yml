@@ -29,8 +29,7 @@ jobs:
           --project "AIdW2sguUcwTwZGI1DPc" \
           --grid "Testim-Grid" \
           --mode "extension" \
-          --branch "8 July 2026 Yuvraj GA" \
-          --suite "Stag_ShipcoOnline-01-Prelogin All Modules" \
-          --override-execution-name "ShipcoStag_8July26_CICDgitHubActions" \
+          --branch "BPO_21 July 2026_Yuvraj" \
+          --suite "BPO-23-Setting Status" \
           --test-config "Chrome - Windows 11 - 1920*1080" \
           --parallel 1
