@@ -25,11 +25,11 @@ jobs:
 
       - run: |
           testim \
-          --token "${{ secrets.TESTIM_TOKEN }}" \
-          --project "AIdW2sguUcwTwZGI1DPc" \
-          --grid "Testim-Grid" \
-          --mode "extension" \
-          --branch "BPO_21 July 2026_Yuvraj" \
-          --suite "BPO-23-Setting Status" \
-          --test-config "Chrome - Windows 11 - 1920*1080" \
-          --parallel 1
+            --token "${{ secrets.TESTIM_TOKEN }}" \
+            --project "AIdW2sguUcwTwZGI1DPc" \
+            --grid "Testim-Grid" \
+            --mode "extension" \
+            --branch "BPO 4 Aug 2026 -Yuvraj" \
+            --suite "BPO-23-Setting Status" \
+            --test-config "Chrome - Windows 11 - 1920*1080" \
+            --parallel 1
